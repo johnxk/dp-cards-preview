@@ -449,9 +449,8 @@ function renderAccount() {
   `;
 }
 
-function prepareMailto(data) {
-  const subject = `dp.cards purchase request: ${data.product}`;
-  const body = [
+function prepareContactLink(data) {
+  const message = [
     "Hi dp.cards,",
     "",
     `Name: ${data.name}`,
@@ -462,7 +461,7 @@ function prepareMailto(data) {
     "",
     "Thanks."
   ].join("\n");
-  return `mailto:sales@dp.cards?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  return `https://wa.me/6581194552?text=${encodeURIComponent(message)}`;
 }
 
 function handleContactSubmit(event) {
@@ -491,11 +490,13 @@ function handleContactSubmit(event) {
   setStored(storageKeys.requests, requests);
   renderAccount();
 
-  const mailto = prepareMailto(data);
+  const contactLink = prepareContactLink(data);
   formResult.textContent = "Order request saved in the user page. ";
   const link = document.createElement("a");
-  link.href = mailto;
-  link.textContent = "Open email draft";
+  link.href = contactLink;
+  link.target = "_blank";
+  link.rel = "noopener";
+  link.textContent = "Open WhatsApp message";
   link.className = "form-mail-link";
   formResult.append(link);
   document.querySelector("#account").scrollIntoView({ behavior: "smooth", block: "start" });

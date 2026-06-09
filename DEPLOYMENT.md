@@ -29,13 +29,13 @@ The `_headers` file is included for Cloudflare Pages and Netlify-style static ho
 
 Caddy will request and renew Let's Encrypt certificates automatically.
 
-## Contact Info To Replace Later
+## Contact Info
 
-Current draft values in `index.html`:
+Current values in `index.html`:
 
-- Email: `sales@dp.cards`
-- WhatsApp or WeChat: `to be added`
-- Instagram: `@dp.cards`
-- Location: `online store, international shipping draft`
+- Contact: `Benedict su`
+- Phone / WhatsApp: `+65 8119 4552`
+- Address: `Parc canberra blk 13 08-28`
+- Postal code: `756947`
 
-The contact form currently prepares a mail draft. A backend, CRM, or form service can replace it later.
+The contact form currently prepares a WhatsApp message to the phone number above. A backend, CRM, or form service can replace it later.

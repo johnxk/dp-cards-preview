@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="220" viewBox="0 0 760 220" role="img" aria-labelledby="title desc">
+  <title id="title">dp.cards logo option 5</title>
+  <desc id="desc">Market tag logo for dp.cards.</desc>
+  <rect width="760" height="220" rx="28" fill="#ffffff"/>
+  <g transform="translate(54 44)">
+    <path d="M28 0h110c16 0 28 12 28 28v84c0 16-12 28-28 28H28C12 140 0 128 0 112V28C0 12 12 0 28 0Z" fill="#eef5ff"/>
+    <path d="M38 30h80c14 0 24 10 24 24v56H62c-18 0-32-14-32-32V38c0-4 4-8 8-8Z" fill="#155eef"/>
+    <path d="M52 56h24c21 0 36 15 36 38s-15 38-36 38H52V56Zm19 17v42h5c10 0 18-8 18-21s-8-21-18-21h-5Z" fill="#ffffff"/>
+    <path d="M116 56h28v18h-28V56Zm0 26h14c20 0 33 12 33 29s-13 29-33 29h-14v-18h14c8 0 14-4 14-11s-6-11-14-11h-14V82Z" fill="#ffffff"/>
+    <circle cx="138" cy="36" r="9" fill="#c33b32"/>
+  </g>
+  <g transform="translate(232 68)">
+    <text x="0" y="58" font-family="Inter, Arial, sans-serif" font-size="62" font-weight="950" letter-spacing="0" fill="#101828">dp.cards</text>
+    <text x="0" y="116" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="850" letter-spacing="0" fill="#087443">visible prices, direct purchase contact</text>
+  </g>
+</svg>
