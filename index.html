@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="dp.cards is a Japanese Pokemon and Japanese One Piece trading card shop with visible pricing and contact-based purchasing."
+      content="dp.cards is a Japanese Pokemon and Japanese One Piece trading card shop with account-based price access and contact-based purchasing."
     />
     <title>dp.cards | Trading Card Shop</title>
     <link rel="icon" type="image/png" href="assets/favicon.png" />
     <link rel="preload" as="image" href="assets/hero-product-studio.png" />
-    <link rel="stylesheet" href="styles.css?v=5" />
+    <link rel="stylesheet" href="styles.css?v=6" />
   </head>
   <body>
     <a class="skip-link" href="#shop">Skip to shop</a>
@@ -32,7 +32,7 @@
           <a href="#drops">Drops</a>
           <a href="#market">Market</a>
           <a href="#contact">Contact</a>
-          <button class="ghost-button compact" type="button" data-login-open>Login</button>
+          <button class="ghost-button compact" type="button" data-login-open>Open account</button>
           <a class="primary-button compact" href="#account" data-account-link>Account</a>
         </div>
       </nav>
@@ -46,12 +46,11 @@
           <p class="eyebrow">Japanese Pokemon and Japanese One Piece only</p>
           <h1 id="hero-title">dp.cards</h1>
           <p class="hero-copy">
-            A Japanese-only trading card storefront for collectors who want visible prices, fast availability checks,
-            and clear confirmation before every purchase.
+            Japanese Pokemon and Japanese One Piece sealed products for collectors. Check price upon account opening.
           </p>
           <div class="hero-actions" aria-label="Main actions">
             <a class="primary-button" href="#shop">Browse inventory</a>
-            <a class="secondary-button" href="#contact">Contact us</a>
+            <button class="secondary-button" type="button" data-login-open>Open account</button>
           </div>
           <dl class="hero-stats" aria-label="Store highlights">
             <div>
@@ -63,8 +62,8 @@
               <dd>reply window</dd>
             </div>
             <div>
-              <dt>100%</dt>
-              <dd>prices visible</dd>
+              <dt>Account</dt>
+              <dd>price access</dd>
             </div>
           </dl>
         </div>
@@ -81,12 +80,11 @@
       <section class="section-shell shop-layout" id="shop" aria-labelledby="shop-title">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">Visible inventory</p>
+            <p class="eyebrow">Japanese inventory</p>
             <h2 id="shop-title">Shop trading cards</h2>
           </div>
           <p>
-            Japanese Pokemon and Japanese One Piece products only. Prices stay visible for every item before dp.cards
-            confirms stock, shipping, and payment details.
+            Japanese Pokemon and Japanese One Piece products only. Check price upon account opening.
           </p>
         </div>
 
@@ -107,8 +105,8 @@
             <p class="eyebrow">Next drop</p>
             <h2 id="drops-title">Reserve before public release</h2>
             <p>
-              Upcoming allocation calendar for Japanese Pokemon and Japanese One Piece sealed products. Availability and
-              prices are reviewed before each confirmed order.
+              Upcoming allocation calendar for Japanese Pokemon and Japanese One Piece sealed products.
+              Check price upon account opening.
             </p>
           </div>
           <div class="drop-list" aria-label="Upcoming drops">
@@ -118,7 +116,7 @@
                 <h3>Pokemon JP restock check</h3>
                 <p>Black Bolt, White Flare, Battle Partners, Team Rocket, and Terastal Fest ex availability checks.</p>
               </div>
-              <strong>From $90.64</strong>
+              <strong class="price-gate">Check price upon account opening</strong>
             </article>
             <article class="drop-row">
               <time datetime="2026-06-21">Jun 21</time>
@@ -126,7 +124,7 @@
                 <h3>One Piece JP restock check</h3>
                 <p>OP-13, OP-12, OP-10, EB-03, PRB-02, OP-09, and OP-14 availability checks.</p>
               </div>
-              <strong>From $54.99</strong>
+              <strong class="price-gate">Check price upon account opening</strong>
             </article>
             <article class="drop-row">
               <time datetime="2026-06-28">Jun 28</time>
@@ -147,8 +145,7 @@
             <h2 id="market-title">Price list</h2>
           </div>
           <p>
-            A simple price board helps buyers compare Japanese Pokemon and Japanese One Piece sealed products before
-            sending a request. dp.cards confirms final stock, shipping, and payment details before any purchase.
+            Check price upon account opening.
           </p>
         </div>
         <div class="market-table-wrap">
@@ -211,7 +208,7 @@
             <p class="eyebrow">Buyer account</p>
             <h2 id="account-title">User page</h2>
           </div>
-          <p>Buyer profile, order request history, and watched products appear here after login or contact request.</p>
+          <p>Check price upon account opening.</p>
         </div>
         <div class="account-panel" data-account-panel></div>
       </section>
@@ -222,7 +219,7 @@
         <a class="brand footer-brand" href="#top" aria-label="dp.cards home">
           <img class="brand-logo" src="assets/logo-selected.png?v=3" alt="dp.cards" />
         </a>
-        <p>Visible prices. Human confirmation. Collector-first service.</p>
+        <p>Check price upon account opening. Collector-first service.</p>
         <a href="#contact">Contact us</a>
       </div>
     </footer>
@@ -232,7 +229,7 @@
         <div class="modal-head">
           <div>
             <p class="eyebrow">Buyer access</p>
-            <h2 id="loginTitle">Login to dp.cards</h2>
+            <h2 id="loginTitle">Open account to check prices</h2>
           </div>
           <button class="icon-button close-button" value="cancel" type="button" data-modal-close aria-label="Close login">x</button>
         </div>
@@ -248,8 +245,8 @@
           <input name="remember" type="checkbox" checked />
           <span>Keep me signed in on this device</span>
         </label>
-        <button class="primary-button full" type="submit">Login</button>
-        <p class="modal-note">Buyer access keeps request history and watched products together for easier follow-up.</p>
+        <button class="primary-button full" type="submit">Open account</button>
+        <p class="modal-note">Check price upon account opening.</p>
       </form>
     </dialog>
 
@@ -265,7 +262,7 @@
         <div class="product-modal-body">
           <img src="assets/product-chronicle-box.png" alt="" data-product-image />
           <div>
-            <p class="product-modal-price" data-product-price>$0</p>
+            <p class="product-modal-price is-gated" data-product-price>Check price upon account opening</p>
             <p data-product-copy></p>
             <dl class="detail-list">
               <div>
@@ -287,6 +284,6 @@
       </div>
     </dialog>
 
-    <script src="app.js?v=9" defer></script>
+    <script src="app.js?v=10" defer></script>
   </body>
 </html>

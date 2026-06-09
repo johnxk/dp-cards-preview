@@ -1,40 +1,41 @@
 const assetBase = window.DP_CARDS_ASSET_BASE || "";
 const assetPath = (path) => `${assetBase}${path}`;
+const priceGateText = "Check price upon account opening";
 
 const products = [
   {
     id: "jp-pokemon-black-bolt-box",
     title: "Pokemon JP Black Bolt Booster Box",
     category: "Japanese Pokemon",
-    badge: "Listed price",
+    badge: "Account price",
     price: 153.38,
     realPrice: 153.38,
     stock: "Available by request",
     image: assetPath("assets/product-real-black-bolt.webp"),
     condition: "Japanese edition | factory sealed",
     code: "SV11B-BB-JP",
-    copy: "Japanese Black Bolt sealed booster box with visible dp.cards pricing.",
+    copy: "Japanese Black Bolt sealed booster box with dp.cards account pricing.",
     market: "up"
   },
   {
     id: "jp-pokemon-white-flare-box",
     title: "Pokemon JP White Flare Deluxe Booster Box",
     category: "Japanese Pokemon",
-    badge: "Listed price",
+    badge: "Account price",
     price: 117.19,
     realPrice: 117.19,
     stock: "Available by request",
     image: assetPath("assets/product-real-white-flare.png"),
     condition: "Japanese edition | factory sealed",
     code: "SV11W-WF-JP",
-    copy: "Japanese White Flare deluxe booster box with visible dp.cards pricing.",
+    copy: "Japanese White Flare deluxe booster box with dp.cards account pricing.",
     market: "steady"
   },
   {
     id: "jp-pokemon-battle-partners-box",
     title: "Pokemon JP Battle Partners Booster Box",
     category: "Japanese Pokemon",
-    badge: "Listed price",
+    badge: "Account price",
     price: 90.64,
     realPrice: 90.64,
     stock: "Available by request",
@@ -48,7 +49,7 @@ const products = [
     id: "jp-pokemon-glory-rocket-box",
     title: "Pokemon JP Glory of Team Rocket Booster Box",
     category: "Japanese Pokemon",
-    badge: "Listed price",
+    badge: "Account price",
     price: 155.49,
     realPrice: 155.49,
     stock: "Available by request",
@@ -62,21 +63,21 @@ const products = [
     id: "jp-pokemon-terastal-festival-box",
     title: "Pokemon JP Terastal Fest ex Booster Box",
     category: "Japanese Pokemon",
-    badge: "Listed price",
+    badge: "Account price",
     price: 96.90,
     realPrice: 96.90,
     stock: "Available by request",
     image: assetPath("assets/product-real-terastal-fest.webp"),
     condition: "Japanese edition | factory sealed",
     code: "SV8A-TFEX-JP",
-    copy: "Japanese Terastal Fest ex sealed booster box with visible dp.cards pricing.",
+    copy: "Japanese Terastal Fest ex sealed booster box with dp.cards account pricing.",
     market: "steady"
   },
   {
     id: "jp-onepiece-op13-box",
     title: "One Piece JP OP-13 The Will of Inheritance Booster Box",
     category: "Japanese One Piece",
-    badge: "Listed price",
+    badge: "Account price",
     price: 109.99,
     realPrice: 109.99,
     stock: "Available by request",
@@ -90,21 +91,21 @@ const products = [
     id: "jp-onepiece-op12-box",
     title: "One Piece JP OP-12 Legacy of the Master Booster Box",
     category: "Japanese One Piece",
-    badge: "Listed price",
+    badge: "Account price",
     price: 64.99,
     realPrice: 64.99,
     stock: "Available by request",
     image: assetPath("assets/product-official-op12.png"),
     condition: "Japanese edition | factory sealed",
     code: "OP-12-JP",
-    copy: "Japanese One Piece OP-12 Legacy of the Master sealed booster box with visible dp.cards pricing.",
+    copy: "Japanese One Piece OP-12 Legacy of the Master sealed booster box with dp.cards account pricing.",
     market: "up"
   },
   {
     id: "jp-onepiece-op10-box",
     title: "One Piece JP OP-10 Royal Bloodline Booster Box",
     category: "Japanese One Piece",
-    badge: "Listed price",
+    badge: "Account price",
     price: 62.99,
     realPrice: 62.99,
     stock: "Available by request",
@@ -118,7 +119,7 @@ const products = [
     id: "jp-onepiece-eb02-box",
     title: "One Piece JP EB-03 Heroines Collection Booster Box",
     category: "Japanese One Piece",
-    badge: "Listed price",
+    badge: "Account price",
     price: 69.99,
     realPrice: 69.99,
     stock: "Available by request",
@@ -132,42 +133,42 @@ const products = [
     id: "jp-onepiece-prb02-box",
     title: "One Piece JP PRB-02 The Best Vol. 2 Booster Box",
     category: "Japanese One Piece",
-    badge: "Listed price",
+    badge: "Account price",
     price: 54.99,
     realPrice: 54.99,
     stock: "Available by request",
     image: assetPath("assets/product-official-prb02.webp"),
     condition: "Japanese edition | factory sealed",
     code: "PRB-02-JP",
-    copy: "Japanese One Piece PRB-02 The Best Vol. 2 booster box with clear dp.cards pricing.",
+    copy: "Japanese One Piece PRB-02 The Best Vol. 2 booster box with dp.cards account pricing.",
     market: "steady"
   },
   {
     id: "jp-onepiece-op09-box",
     title: "One Piece JP OP-09 Emperors in the New World Booster Box",
     category: "Japanese One Piece",
-    badge: "Listed price",
+    badge: "Account price",
     price: 79.99,
     realPrice: 79.99,
     stock: "Available by request",
     image: assetPath("assets/product-official-op09.png"),
     condition: "Japanese edition | factory sealed",
     code: "OP-09-JP",
-    copy: "Japanese One Piece OP-09 booster box with visible dp.cards pricing.",
+    copy: "Japanese One Piece OP-09 booster box with dp.cards account pricing.",
     market: "up"
   },
   {
     id: "jp-onepiece-op14-box",
     title: "One Piece JP OP-14 Seven Warlords of the Sea Booster Box",
     category: "Japanese One Piece",
-    badge: "Listed price",
+    badge: "Account price",
     price: 79.99,
     realPrice: 79.99,
     stock: "Available by request",
     image: assetPath("assets/product-official-op14.webp"),
     condition: "Japanese edition | factory sealed",
     code: "OP-14-JP",
-    copy: "Japanese One Piece OP-14 Seven Warlords of the Sea sealed booster box with visible dp.cards pricing.",
+    copy: "Japanese One Piece OP-14 Seven Warlords of the Sea sealed booster box with dp.cards account pricing.",
     market: "steady"
   }
 ];
@@ -225,6 +226,18 @@ function getUser() {
   return getStored(storageKeys.user, null);
 }
 
+function canShowPrices() {
+  return Boolean(getUser());
+}
+
+function priceText(product) {
+  return canShowPrices() ? formatPrice(displayPrice(product)) : priceGateText;
+}
+
+function priceClass(baseClass = "price") {
+  return canShowPrices() ? baseClass : `${baseClass} is-gated`;
+}
+
 function getRequests() {
   return getStored(storageKeys.requests, []);
 }
@@ -275,6 +288,7 @@ function renderFilters() {
 
 function renderProducts() {
   const visible = filteredProducts();
+  const showPrices = canShowPrices();
   productGrid.innerHTML = "";
 
   if (!visible.length) {
@@ -295,8 +309,8 @@ function renderProducts() {
           <img src="${product.image}" alt="${product.title}" loading="lazy" />
         </div>
         <div class="product-frame-foot">
-          <span>Price</span>
-          <strong>${formatPrice(displayPrice(product))}</strong>
+          <span>${showPrices ? "Price" : "Account price"}</span>
+          <strong class="${showPrices ? "" : "is-gated"}">${priceText(product)}</strong>
         </div>
       </div>
       <div class="product-body">
@@ -305,8 +319,8 @@ function renderProducts() {
           <span class="badge">${product.badge}</span>
         </div>
         <p class="product-meta">${product.category} | ${product.condition} | ${product.code}</p>
-        <div class="price-line">
-          <span class="price">${formatPrice(displayPrice(product))}</span>
+        <div class="price-line${showPrices ? "" : " is-gated"}">
+          <span class="${priceClass()}">${priceText(product)}</span>
           <span class="stock">${product.stock}</span>
         </div>
         <div class="product-actions">
@@ -320,6 +334,7 @@ function renderProducts() {
 }
 
 function renderMarket() {
+  const showPrices = canShowPrices();
   marketBody.innerHTML = products
     .map((product) => {
       const trendLabel = product.market === "up" ? "Rising" : product.market === "flat" ? "Flat" : "Stable";
@@ -328,7 +343,7 @@ function renderMarket() {
         <tr>
           <td>${product.title}</td>
           <td>${product.category}</td>
-          <td>${formatPrice(displayPrice(product))}</td>
+          <td class="${showPrices ? "" : "is-gated-cell"}">${priceText(product)}</td>
           <td class="${trendClass}">${trendLabel}</td>
           <td>${product.stock}</td>
         </tr>
@@ -338,9 +353,10 @@ function renderMarket() {
 }
 
 function renderContactOptions() {
+  const showPrices = canShowPrices();
   const options = [
     '<option value="General request">General request</option>',
-    ...products.map((product) => `<option value="${product.title}">${product.title} - ${formatPrice(displayPrice(product))}</option>`)
+    ...products.map((product) => `<option value="${product.title}">${product.title}${showPrices ? ` - ${priceText(product)}` : ""}</option>`)
   ];
   contactProduct.innerHTML = options.join("");
 }
@@ -367,7 +383,9 @@ function openProduct(productId) {
   document.querySelector("[data-product-title]").textContent = activeProduct.title;
   document.querySelector("[data-product-image]").src = activeProduct.image;
   document.querySelector("[data-product-image]").alt = activeProduct.title;
-  document.querySelector("[data-product-price]").textContent = formatPrice(displayPrice(activeProduct));
+  const modalPrice = document.querySelector("[data-product-price]");
+  modalPrice.textContent = priceText(activeProduct);
+  modalPrice.classList.toggle("is-gated", !canShowPrices());
   document.querySelector("[data-product-copy]").textContent = activeProduct.copy;
   document.querySelector("[data-product-condition]").textContent = activeProduct.condition;
   document.querySelector("[data-product-stock]").textContent = activeProduct.stock;
@@ -400,17 +418,17 @@ function renderAccount() {
     .map((id) => products.find((product) => product.id === id))
     .filter(Boolean);
 
-  accountLink.textContent = "Account";
+  accountLink.textContent = user ? "Account" : "Open account";
 
   if (!user) {
     accountPanel.innerHTML = `
       <div class="empty-account">
         <div>
           <p class="eyebrow">No user signed in</p>
-          <h3>Login to see request history and watched items.</h3>
+          <h3>Open account to check prices.</h3>
         </div>
-        <p>Login or submit an order request to see your buyer page and request history.</p>
-        <button class="primary-button" type="button" data-login-open>Login</button>
+        <p>${priceGateText}</p>
+        <button class="primary-button" type="button" data-login-open>Open account</button>
       </div>
     `;
     return;
@@ -446,7 +464,7 @@ function renderAccount() {
             <strong>${product.title}</strong>
             <p>${product.stock}</p>
           </div>
-          <span class="price">${formatPrice(displayPrice(product))}</span>
+          <span class="${priceClass()}">${priceText(product)}</span>
         </article>
       `
     )
@@ -517,6 +535,9 @@ function handleContactSubmit(event) {
     createdAt
   });
   setStored(storageKeys.requests, requests);
+  renderProducts();
+  renderMarket();
+  renderContactOptions();
   renderAccount();
 
   const contactLink = prepareContactLink(data);
@@ -539,6 +560,9 @@ function handleLogin(event) {
     signedInAt: new Date().toISOString()
   });
   closeDialog(loginModal);
+  renderProducts();
+  renderMarket();
+  renderContactOptions();
   renderAccount();
   document.querySelector("#account").scrollIntoView({ behavior: "smooth", block: "start" });
 }
@@ -561,6 +585,9 @@ function bindEvents() {
     }
     if (event.target.closest("[data-logout]")) {
       localStorage.removeItem(storageKeys.user);
+      renderProducts();
+      renderMarket();
+      renderContactOptions();
       renderAccount();
     }
     if (event.target.closest("[data-modal-close]")) {
