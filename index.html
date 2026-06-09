@@ -10,7 +10,7 @@
     <title>dp.cards | Trading Card Shop</title>
     <link rel="icon" type="image/png" href="assets/favicon.png" />
     <link rel="preload" as="image" href="assets/hero-product-studio.png" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=4" />
   </head>
   <body>
     <a class="skip-link" href="#shop">Skip to shop</a>
@@ -107,8 +107,8 @@
             <p class="eyebrow">Next drop</p>
             <h2 id="drops-title">Reserve before public release</h2>
             <p>
-              Draft drop calendar for Japanese Pokemon and Japanese One Piece sealed products. Contact details can be
-              swapped in before this goes live.
+              Upcoming allocation calendar for Japanese Pokemon and Japanese One Piece sealed products. Product source
+              and price checks are refreshed before each confirmed order.
             </p>
           </div>
           <div class="drop-list" aria-label="Upcoming drops">
@@ -148,7 +148,8 @@
           </div>
           <p>
             A simple price board helps buyers compare Japanese Pokemon and Japanese One Piece sealed products before
-            asking for a quote. Replace these draft values with live inventory later.
+            asking for a quote. Prices are public reference values; dp.cards confirms final stock, shipping, and payment
+            manually before any purchase.
           </p>
         </div>
         <div class="market-table-wrap">
@@ -218,7 +219,7 @@
             <p class="eyebrow">Buyer account</p>
             <h2 id="account-title">User page</h2>
           </div>
-          <p>Demo buyer profile, order request history, and watched products. This runs locally until WooCommerce handles real accounts.</p>
+          <p>Buyer profile, order request history, and watched products saved for this device while requests are manually confirmed.</p>
         </div>
         <div class="account-panel" data-account-panel></div>
       </section>
@@ -249,14 +250,14 @@
         </label>
         <label>
           <span>Password</span>
-          <input name="password" type="password" autocomplete="current-password" placeholder="Use any demo password" required />
+          <input name="password" type="password" autocomplete="current-password" placeholder="Password" required />
         </label>
         <label class="check-row">
           <input name="remember" type="checkbox" checked />
           <span>Keep me signed in on this device</span>
         </label>
         <button class="primary-button full" type="submit">Login</button>
-        <p class="modal-note">Demo login saves a local buyer profile only. Real authentication can be connected later.</p>
+        <p class="modal-note">Buyer access saves request history on this device while dp.cards confirms each order manually.</p>
       </form>
     </dialog>
 
@@ -298,6 +299,6 @@
       </div>
     </dialog>
 
-    <script src="app.js" defer></script>
+    <script src="app.js?v=4" defer></script>
   </body>
 </html>

@@ -451,7 +451,7 @@ function renderAccount() {
           <p class="eyebrow">No user signed in</p>
           <h3>Login to see request history and watched items.</h3>
         </div>
-        <p>Use the demo login or submit an order request to preview the user page. A real account system can be connected through WooCommerce later.</p>
+        <p>Login or submit an order request to see the buyer page and request history for this device.</p>
         <button class="primary-button" type="button" data-login-open>Login</button>
       </div>
     `;
@@ -499,7 +499,7 @@ function renderAccount() {
       <aside class="profile-box">
         <div class="account-avatar">${initialsFromEmail(user.email)}</div>
         <h3>${user.email}</h3>
-        <p>Demo buyer profile</p>
+        <p>Buyer profile</p>
         <button class="ghost-button full" type="button" data-logout>Logout</button>
       </aside>
       <div class="account-content">
