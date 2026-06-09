@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="dp.cards is a Japanese Pokemon and Japanese One Piece trading card shop with visible pricing and contact-based purchasing."
+    />
+    <title>dp.cards | Trading Card Shop</title>
+    <link rel="preload" as="image" href="assets/hero-product-studio.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#shop">Skip to shop</a>
+
+    <header class="site-header" data-header>
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="dp.cards home">
+          <span class="brand-mark">dp</span>
+          <span class="brand-name">dp.cards</span>
+        </a>
+
+        <button class="icon-button menu-toggle" type="button" data-menu-toggle aria-label="Open navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-links" data-nav-links>
+          <a href="#shop">Shop</a>
+          <a href="#drops">Drops</a>
+          <a href="#market">Market</a>
+          <a href="#contact">Contact</a>
+          <button class="ghost-button compact" type="button" data-login-open>Login</button>
+          <a class="primary-button compact" href="#account" data-account-link>Account</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero-section" aria-labelledby="hero-title">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Japanese Pokemon and Japanese One Piece only</p>
+          <h1 id="hero-title">dp.cards</h1>
+          <p class="hero-copy">
+            A Japanese-only trading card storefront for collectors who want visible prices, fast availability checks,
+            and human confirmation before every purchase.
+          </p>
+          <div class="hero-actions" aria-label="Main actions">
+            <a class="primary-button" href="#shop">Browse inventory</a>
+            <a class="secondary-button" href="#contact">Contact to purchase</a>
+          </div>
+          <dl class="hero-stats" aria-label="Store highlights">
+            <div>
+              <dt>12</dt>
+              <dd>listed items</dd>
+            </div>
+            <div>
+              <dt>24h</dt>
+              <dd>quote window</dd>
+            </div>
+            <div>
+              <dt>100%</dt>
+              <dd>prices visible</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="category-strip" aria-label="Featured categories">
+        <a href="#shop" data-category-shortcut="All Japanese">All Japanese</a>
+        <a href="#shop" data-category-shortcut="Japanese Pokemon">Japanese Pokemon</a>
+        <a href="#shop" data-category-shortcut="Japanese One Piece">Japanese One Piece</a>
+        <a href="#contact" data-category-shortcut="Japanese Pokemon">Pokemon case quote</a>
+        <a href="#contact" data-category-shortcut="Japanese One Piece">One Piece case quote</a>
+      </section>
+
+      <section class="section-shell shop-layout" id="shop" aria-labelledby="shop-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Visible inventory</p>
+            <h2 id="shop-title">Shop trading cards</h2>
+          </div>
+          <p>
+            Offline draft catalog for Japanese Pokemon and Japanese One Piece products only. Prices stay visible for every
+            item; dp.cards confirms stock, shipping, and payment details directly.
+          </p>
+        </div>
+
+        <div class="shop-controls" aria-label="Shop filters">
+          <label class="search-field" for="searchInput">
+            <span>Search</span>
+            <input id="searchInput" type="search" placeholder="Pokemon, One Piece, OP-12..." data-search />
+          </label>
+          <div class="filter-pills" role="list" aria-label="Category filters" data-filters></div>
+        </div>
+
+        <div class="product-grid" data-product-grid aria-live="polite"></div>
+      </section>
+
+      <section class="section-band" id="drops" aria-labelledby="drops-title">
+        <div class="section-shell split-section">
+          <div class="section-heading stack">
+            <p class="eyebrow">Next drop</p>
+            <h2 id="drops-title">Reserve before public release</h2>
+            <p>
+              Draft drop calendar for Japanese Pokemon and Japanese One Piece sealed products. Contact details can be
+              swapped in before this goes live.
+            </p>
+          </div>
+          <div class="drop-list" aria-label="Upcoming drops">
+            <article class="drop-row">
+              <time datetime="2026-06-16">Jun 16</time>
+              <div>
+                <h3>Pokemon JP Mega allocation</h3>
+                <p>Japanese Mega Brave and Mega Symphonia booster boxes. Draft request limit: 2 boxes per buyer.</p>
+              </div>
+              <strong>From $118</strong>
+            </article>
+            <article class="drop-row">
+              <time datetime="2026-06-21">Jun 21</time>
+              <div>
+                <h3>Pokemon JP restock check</h3>
+                <p>Black Bolt, White Flare, Battle Partners, and Terastal Festival ex quote requests.</p>
+              </div>
+              <strong>From $78</strong>
+            </article>
+            <article class="drop-row">
+              <time datetime="2026-06-28">Jun 28</time>
+              <div>
+                <h3>One Piece JP sealed wave</h3>
+                <p>OP-12, OP-11, OP-10, EB-02, starter decks, and sealed case quotes.</p>
+              </div>
+              <strong>From $24</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell market-section" id="market" aria-labelledby="market-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Buyer view</p>
+            <h2 id="market-title">Market snapshot</h2>
+          </div>
+          <p>
+            A simple price board helps buyers compare Japanese Pokemon and Japanese One Piece sealed products before
+            asking for a quote. Replace these draft values with live inventory later.
+          </p>
+        </div>
+        <div class="market-table-wrap">
+          <table class="market-table">
+            <thead>
+              <tr>
+                <th scope="col">Item</th>
+                <th scope="col">Category</th>
+                <th scope="col">Visible price</th>
+                <th scope="col">Trend</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody data-market-body></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section-band contact-band" id="contact" aria-labelledby="contact-title">
+        <div class="section-shell contact-layout">
+          <div>
+            <p class="eyebrow">Contact to purchase</p>
+            <h2 id="contact-title">Ask for stock, shipping, and payment details</h2>
+            <p>
+              Buyers send an item request first. You confirm availability, shipping cost, and final payment instructions
+              manually.
+            </p>
+            <address class="contact-card">
+              <span>Email: sales@dp.cards</span>
+              <span>WhatsApp or WeChat: to be added</span>
+              <span>Instagram: @dp.cards</span>
+              <span>Location: online store, international shipping draft</span>
+            </address>
+          </div>
+
+          <form class="contact-form" data-contact-form>
+            <label>
+              <span>Your name</span>
+              <input name="name" type="text" autocomplete="name" required />
+            </label>
+            <label>
+              <span>Email or chat handle</span>
+              <input name="replyTo" type="text" autocomplete="email" required />
+            </label>
+            <label>
+              <span>Product</span>
+              <select name="product" data-contact-product required></select>
+            </label>
+            <label>
+              <span>Quantity</span>
+              <input name="quantity" type="number" min="1" max="24" value="1" required />
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="5" placeholder="Quantity, destination country, Japanese product version, and box/case photo questions."></textarea>
+            </label>
+            <button class="primary-button full" type="submit">Submit order request</button>
+            <p class="form-result" data-form-result role="status"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="section-shell account-section" id="account" aria-labelledby="account-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Buyer account</p>
+            <h2 id="account-title">User page</h2>
+          </div>
+          <p>Demo buyer profile, order request history, and watched products. This runs locally until WooCommerce handles real accounts.</p>
+        </div>
+        <div class="account-panel" data-account-panel></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-inner">
+        <a class="brand footer-brand" href="#top" aria-label="dp.cards home">
+          <span class="brand-mark">dp</span>
+          <span class="brand-name">dp.cards</span>
+        </a>
+        <p>Visible prices. Human confirmation. Collector-first service.</p>
+        <a href="#contact">Contact to purchase</a>
+      </div>
+    </footer>
+
+    <dialog class="modal" data-login-modal aria-labelledby="loginTitle">
+      <form class="modal-card" method="dialog" data-login-form>
+        <div class="modal-head">
+          <div>
+            <p class="eyebrow">Buyer access</p>
+            <h2 id="loginTitle">Login to dp.cards</h2>
+          </div>
+          <button class="icon-button close-button" value="cancel" type="button" data-modal-close aria-label="Close login">x</button>
+        </div>
+        <label>
+          <span>Email</span>
+          <input name="email" type="email" autocomplete="email" placeholder="collector@example.com" required />
+        </label>
+        <label>
+          <span>Password</span>
+          <input name="password" type="password" autocomplete="current-password" placeholder="Use any demo password" required />
+        </label>
+        <label class="check-row">
+          <input name="remember" type="checkbox" checked />
+          <span>Keep me signed in on this device</span>
+        </label>
+        <button class="primary-button full" type="submit">Login</button>
+        <p class="modal-note">Demo login saves a local buyer profile only. Real authentication can be connected later.</p>
+      </form>
+    </dialog>
+
+    <dialog class="modal" data-product-modal aria-labelledby="productTitle">
+      <div class="modal-card product-modal-card">
+        <div class="modal-head">
+          <div>
+            <p class="eyebrow" data-product-kicker>Product</p>
+            <h2 id="productTitle" data-product-title>Product details</h2>
+          </div>
+          <button class="icon-button close-button" type="button" data-product-close aria-label="Close product">x</button>
+        </div>
+        <div class="product-modal-body">
+          <img src="assets/product-chronicle-box.png" alt="" data-product-image />
+          <div>
+            <p class="product-modal-price" data-product-price>$0</p>
+            <p data-product-copy></p>
+            <dl class="detail-list">
+              <div>
+                <dt>Condition</dt>
+                <dd data-product-condition></dd>
+              </div>
+              <div>
+                <dt>Availability</dt>
+                <dd data-product-stock></dd>
+              </div>
+              <div>
+                <dt>Code</dt>
+                <dd data-product-code></dd>
+              </div>
+            </dl>
+            <button class="primary-button full" type="button" data-modal-request>Request this item</button>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
