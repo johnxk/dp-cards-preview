@@ -525,7 +525,7 @@ function handleContactSubmit(event) {
   link.href = contactLink;
   link.target = "_blank";
   link.rel = "noopener";
-  link.textContent = "Open WhatsApp message";
+  link.textContent = "Contact us";
   link.className = "form-mail-link";
   formResult.append(link);
   document.querySelector("#account").scrollIntoView({ behavior: "smooth", block: "start" });
