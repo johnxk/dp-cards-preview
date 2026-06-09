@@ -31,11 +31,8 @@ Caddy will request and renew Let's Encrypt certificates automatically.
 
 ## Contact Info
 
-Current values in `index.html`:
+Current value in `index.html`:
 
-- Contact: `Benedict su`
-- Phone / WhatsApp: `+65 8119 4552`
-- Address: `Parc canberra blk 13 08-28`
-- Postal code: `756947`
+- WhatsApp: `+65 8119 4552`
 
 The contact form currently prepares a WhatsApp message to the phone number above. A backend, CRM, or form service can replace it later.
