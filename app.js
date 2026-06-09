@@ -13,7 +13,7 @@ const products = [
     image: assetPath("assets/product-real-black-bolt.webp"),
     condition: "Japanese edition | factory sealed",
     code: "SV11B-BB-JP",
-    copy: "Japanese Black Bolt sealed booster box, framed for dp.cards buyers with clear contact-to-purchase pricing.",
+    copy: "Japanese Black Bolt sealed booster box with visible dp.cards pricing.",
     market: "up"
   },
   {
@@ -27,7 +27,7 @@ const products = [
     image: assetPath("assets/product-real-white-flare.png"),
     condition: "Japanese edition | factory sealed",
     code: "SV11W-WF-JP",
-    copy: "Japanese White Flare deluxe booster box with clear pricing and a real product image.",
+    copy: "Japanese White Flare deluxe booster box with visible dp.cards pricing.",
     market: "steady"
   },
   {
@@ -41,7 +41,7 @@ const products = [
     image: assetPath("assets/product-real-battle-partners.webp"),
     condition: "Japanese edition | factory sealed",
     code: "SV9-BP-JP",
-    copy: "Japanese Battle Partners booster box available for manual stock and shipping confirmation.",
+    copy: "Japanese Battle Partners booster box available for stock and shipping confirmation.",
     market: "steady"
   },
   {
@@ -55,7 +55,7 @@ const products = [
     image: assetPath("assets/product-real-glory-rocket.webp"),
     condition: "Japanese edition | factory sealed",
     code: "SV10-GTR-JP",
-    copy: "Japanese Glory of Team Rocket sealed booster box, ready for buyer quote and stock confirmation.",
+    copy: "Japanese Glory of Team Rocket sealed booster box, ready for availability and stock confirmation.",
     market: "up"
   },
   {
@@ -69,7 +69,7 @@ const products = [
     image: assetPath("assets/product-real-terastal-fest.webp"),
     condition: "Japanese edition | factory sealed",
     code: "SV8A-TFEX-JP",
-    copy: "Japanese Terastal Fest ex sealed product, presented in the dp.cards product frame.",
+    copy: "Japanese Terastal Fest ex sealed booster box with visible dp.cards pricing.",
     market: "steady"
   },
   {
@@ -111,7 +111,7 @@ const products = [
     image: assetPath("assets/product-official-op10.png"),
     condition: "Japanese edition | factory sealed",
     code: "OP-10-JP",
-    copy: "Japanese One Piece OP-10 Royal Bloodline sealed booster box with manual confirmation before payment.",
+    copy: "Japanese One Piece OP-10 Royal Bloodline sealed booster box with stock confirmation before payment.",
     market: "steady"
   },
   {
@@ -153,7 +153,7 @@ const products = [
     image: assetPath("assets/product-official-op09.png"),
     condition: "Japanese edition | factory sealed",
     code: "OP-09-JP",
-    copy: "Japanese One Piece OP-09 booster box with visible price and real product image.",
+    copy: "Japanese One Piece OP-09 booster box with visible dp.cards pricing.",
     market: "up"
   },
   {
@@ -167,7 +167,7 @@ const products = [
     image: assetPath("assets/product-official-op14.webp"),
     condition: "Japanese edition | factory sealed",
     code: "OP-14-JP",
-    copy: "Japanese One Piece OP-14 Seven Warlords of the Sea sealed booster box, framed for dp.cards.",
+    copy: "Japanese One Piece OP-14 Seven Warlords of the Sea sealed booster box with visible dp.cards pricing.",
     market: "steady"
   }
 ];
@@ -409,7 +409,7 @@ function renderAccount() {
           <p class="eyebrow">No user signed in</p>
           <h3>Login to see request history and watched items.</h3>
         </div>
-        <p>Login or submit an order request to see the buyer page and request history for this device.</p>
+        <p>Login or submit an order request to see your buyer page and request history.</p>
         <button class="primary-button" type="button" data-login-open>Login</button>
       </div>
     `;
@@ -465,7 +465,7 @@ function renderAccount() {
           <h3>Order requests</h3>
           <div class="account-summary">
             <span>${requests.length} order requests</span>
-            <span>Status: awaiting manual confirmation</span>
+            <span>Status: awaiting dp.cards confirmation</span>
           </div>
           ${requestRows}
         </section>
@@ -499,7 +499,7 @@ function handleContactSubmit(event) {
   const requests = getRequests();
   const product = productFromTitle(data.product);
   const quantity = Math.max(1, Number(data.quantity || 1));
-  const total = product ? formatPrice(displayPrice(product) * quantity) : "Quote";
+  const total = product ? formatPrice(displayPrice(product) * quantity) : "Pending";
   const createdAt = new Date().toLocaleString([], { dateStyle: "medium", timeStyle: "short" });
   if (!getUser()) {
     setStored(storageKeys.user, {
@@ -512,7 +512,7 @@ function handleContactSubmit(event) {
     quantity,
     total,
     orderId: orderNumber(requests.length),
-    status: "Awaiting quote",
+    status: "Awaiting confirmation",
     nextStep: "dp.cards confirms stock, shipping, and payment instructions before payment.",
     createdAt
   });
@@ -520,7 +520,7 @@ function handleContactSubmit(event) {
   renderAccount();
 
   const contactLink = prepareContactLink(data);
-  formResult.textContent = "Order request saved in the user page. ";
+  formResult.textContent = "Request saved. ";
   const link = document.createElement("a");
   link.href = contactLink;
   link.target = "_blank";

@@ -29,10 +29,6 @@ The `_headers` file is included for Cloudflare Pages and Netlify-style static ho
 
 Caddy will request and renew Let's Encrypt certificates automatically.
 
-## Contact Info
+## Contact Flow
 
-Current value in `index.html`:
-
-- WhatsApp: `+65 8119 4552`
-
-The contact form currently prepares a WhatsApp message to the phone number above. A backend, CRM, or form service can replace it later.
+The public page shows only a `Contact us` button. Keep private contact details out of visible storefront copy.
