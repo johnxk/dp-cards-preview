@@ -6,203 +6,167 @@ const products = [
     id: "jp-pokemon-black-bolt-box",
     title: "Pokemon JP Black Bolt Booster Box",
     category: "Japanese Pokemon",
-    badge: "Real market price",
+    badge: "Listed price",
     price: 153.38,
     realPrice: 153.38,
-    stock: "Price tracked",
+    stock: "Available by request",
     image: assetPath("assets/product-real-black-bolt.webp"),
     condition: "Japanese edition | factory sealed",
     code: "SV11B-BB-JP",
-    source: "PokeTrace TCGPlayer/eBay",
-    sourceUrl: "https://poketrace.com/cards/black-bolt-booster-box-japanese--sv11b-black-bolt-Normal",
-    marketNote: "$153.38 current TCGPlayer/eBay value, 152 price records.",
-    copy: "Japanese Black Bolt sealed booster box, priced from public TCGPlayer/eBay market data and framed for dp.cards.",
+    copy: "Japanese Black Bolt sealed booster box, framed for dp.cards buyers with clear contact-to-purchase pricing.",
     market: "up"
   },
   {
     id: "jp-pokemon-white-flare-box",
     title: "Pokemon JP White Flare Deluxe Booster Box",
     category: "Japanese Pokemon",
-    badge: "Real market price",
+    badge: "Listed price",
     price: 117.19,
     realPrice: 117.19,
-    stock: "Price tracked",
+    stock: "Available by request",
     image: assetPath("assets/product-real-white-flare.png"),
     condition: "Japanese edition | factory sealed",
     code: "SV11W-WF-JP",
-    source: "PokeTrace TCGPlayer/eBay",
-    sourceUrl: "https://poketrace.com/cards/white-flare-deluxe-booster-box-japanese--sv11w-white-flare-Normal",
-    marketNote: "$117.19 current TCGPlayer/eBay value, 141 price records.",
-    copy: "Japanese White Flare deluxe booster box with public market price reference and real product image.",
+    copy: "Japanese White Flare deluxe booster box with clear pricing and a real product image.",
     market: "steady"
   },
   {
     id: "jp-pokemon-battle-partners-box",
     title: "Pokemon JP Battle Partners Booster Box",
     category: "Japanese Pokemon",
-    badge: "Real market price",
+    badge: "Listed price",
     price: 90.64,
     realPrice: 90.64,
-    stock: "Price tracked",
+    stock: "Available by request",
     image: assetPath("assets/product-real-battle-partners.webp"),
     condition: "Japanese edition | factory sealed",
     code: "SV9-BP-JP",
-    source: "PokeTrace TCGPlayer/eBay",
-    sourceUrl: "https://poketrace.com/ja/cards/battle-partners-booster-box-japanese--sv9-battle-partners-Normal",
-    marketNote: "$90.64 current TCGPlayer/eBay value, 172 price records.",
-    copy: "Japanese Battle Partners booster box, priced from current public market tracking.",
+    copy: "Japanese Battle Partners booster box available for manual stock and shipping confirmation.",
     market: "steady"
   },
   {
     id: "jp-pokemon-glory-rocket-box",
     title: "Pokemon JP Glory of Team Rocket Booster Box",
     category: "Japanese Pokemon",
-    badge: "Real market price",
+    badge: "Listed price",
     price: 155.49,
     realPrice: 155.49,
-    stock: "Price tracked",
+    stock: "Available by request",
     image: assetPath("assets/product-real-glory-rocket.webp"),
     condition: "Japanese edition | factory sealed",
     code: "SV10-GTR-JP",
-    source: "PriceCharting / eBay",
-    sourceUrl: "https://www.pricecharting.com/game/pokemon-japanese-glory-of-team-rocket/booster-box",
-    marketNote: "$155.49 ungraded market value with recent eBay sale range checked.",
-    copy: "Japanese Glory of Team Rocket sealed booster box, priced from public marketplace tracker data.",
+    copy: "Japanese Glory of Team Rocket sealed booster box, ready for buyer quote and stock confirmation.",
     market: "up"
   },
   {
     id: "jp-pokemon-terastal-festival-box",
     title: "Pokemon JP Terastal Fest ex Booster Box",
     category: "Japanese Pokemon",
-    badge: "Real market price",
+    badge: "Listed price",
     price: 96.90,
     realPrice: 96.90,
-    stock: "Price tracked",
+    stock: "Available by request",
     image: assetPath("assets/product-real-terastal-fest.webp"),
     condition: "Japanese edition | factory sealed",
     code: "SV8A-TFEX-JP",
-    source: "PokeTrace TCGPlayer/eBay",
-    sourceUrl: "https://poketrace.com/cards/terastal-fest-ex-booster-pack-japanese--sv8a-terastal-fest-ex-Normal",
-    marketNote: "$96.90 current TCGPlayer/eBay value, 177 price records.",
-    copy: "Japanese Terastal Fest ex sealed product reference with public market value and dp.cards display frame.",
+    copy: "Japanese Terastal Fest ex sealed product, presented in the dp.cards product frame.",
     market: "steady"
   },
   {
     id: "jp-onepiece-op13-box",
     title: "One Piece JP OP-13 The Will of Inheritance Booster Box",
     category: "Japanese One Piece",
-    badge: "Live shop price",
+    badge: "Listed price",
     price: 109.99,
     realPrice: 109.99,
-    stock: "Source listing",
+    stock: "Available by request",
     image: assetPath("assets/product-real-op13.jpg"),
     condition: "Japanese edition | factory sealed",
     code: "OP-13-JP",
-    source: "PurrfectPulls",
-    sourceUrl: "https://purrfectpulls.com/products/one-piece-card-game-op-13-the-will-of-inheritance-japanese-booster-box",
-    marketNote: "$109.99 listed source price.",
-    copy: "Japanese One Piece OP-13 booster box with live public shop price reference.",
+    copy: "Japanese One Piece OP-13 booster box for collectors requesting sealed Japanese product.",
     market: "up"
   },
   {
     id: "jp-onepiece-op12-box",
     title: "One Piece JP OP-12 Legacy of the Master Booster Box",
     category: "Japanese One Piece",
-    badge: "Live shop price",
+    badge: "Listed price",
     price: 64.99,
     realPrice: 64.99,
-    stock: "Source listing",
+    stock: "Available by request",
     image: assetPath("assets/product-real-op12.jpg"),
     condition: "Japanese edition | factory sealed",
     code: "OP-12-JP",
-    source: "PurrfectPulls",
-    sourceUrl: "https://purrfectpulls.com/products/one-piece-card-game-op-12-legacy-of-the-master-japanese-booster-box",
-    marketNote: "$64.99 listed source price.",
-    copy: "Japanese One Piece OP-12 Legacy of the Master sealed booster box, with public product page price.",
+    copy: "Japanese One Piece OP-12 Legacy of the Master sealed booster box with visible dp.cards pricing.",
     market: "up"
   },
   {
     id: "jp-onepiece-op10-box",
     title: "One Piece JP OP-10 Royal Bloodline Booster Box",
     category: "Japanese One Piece",
-    badge: "Live shop price",
+    badge: "Listed price",
     price: 62.99,
     realPrice: 62.99,
-    stock: "Source listing",
+    stock: "Available by request",
     image: assetPath("assets/product-real-op10.jpg"),
     condition: "Japanese edition | factory sealed",
     code: "OP-10-JP",
-    source: "PurrfectPulls",
-    sourceUrl: "https://purrfectpulls.com/products/one-piece-card-game-op-10-royal-bloodline-japanese-booster-box",
-    marketNote: "$62.99 listed source price.",
-    copy: "Japanese One Piece OP-10 Royal Bloodline sealed booster box, priced from a public shop listing.",
+    copy: "Japanese One Piece OP-10 Royal Bloodline sealed booster box with manual confirmation before payment.",
     market: "steady"
   },
   {
     id: "jp-onepiece-eb02-box",
     title: "One Piece JP EB-03 Heroines Collection Booster Box",
     category: "Japanese One Piece",
-    badge: "Live shop price",
+    badge: "Listed price",
     price: 69.99,
     realPrice: 69.99,
-    stock: "Source listing",
+    stock: "Available by request",
     image: assetPath("assets/product-real-eb03.jpg"),
     condition: "Japanese edition | factory sealed",
     code: "EB-03-JP",
-    source: "PurrfectPulls",
-    sourceUrl: "https://purrfectpulls.com/products/one-piece-card-game-eb-03-heroines-collection-japanese-booster-box",
-    marketNote: "$69.99 listed source price.",
-    copy: "Japanese One Piece EB-03 Heroines Collection extra booster box with live public source price.",
+    copy: "Japanese One Piece EB-03 Heroines Collection extra booster box for contact-based purchase requests.",
     market: "flat"
   },
   {
     id: "jp-onepiece-prb02-box",
     title: "One Piece JP PRB-02 The Best Vol. 2 Booster Box",
     category: "Japanese One Piece",
-    badge: "Live shop price",
+    badge: "Listed price",
     price: 54.99,
     realPrice: 54.99,
-    stock: "Source listing",
+    stock: "Available by request",
     image: assetPath("assets/product-real-prb02.jpg"),
     condition: "Japanese edition | factory sealed",
     code: "PRB-02-JP",
-    source: "PurrfectPulls",
-    sourceUrl: "https://purrfectpulls.com/products/one-piece-card-game-prb-02-the-best-vol-2-japanese-booster-box",
-    marketNote: "$54.99 listed source price.",
-    copy: "Japanese One Piece PRB-02 The Best Vol. 2 booster box with public source price.",
+    copy: "Japanese One Piece PRB-02 The Best Vol. 2 booster box with clear dp.cards pricing.",
     market: "steady"
   },
   {
     id: "jp-onepiece-op09-box",
     title: "One Piece JP OP-09 Emperors in the New World Booster Box",
     category: "Japanese One Piece",
-    badge: "Live shop price",
+    badge: "Listed price",
     price: 79.99,
     realPrice: 79.99,
-    stock: "Source listing",
+    stock: "Available by request",
     image: assetPath("assets/product-real-op09.jpg"),
     condition: "Japanese edition | factory sealed",
     code: "OP-09-JP",
-    source: "PurrfectPulls",
-    sourceUrl: "https://purrfectpulls.com/products/one-piece-card-game-op-09-emperors-in-the-new-world-japanese-booster-box",
-    marketNote: "$79.99 listed source price.",
-    copy: "Japanese One Piece OP-09 booster box with public source price and real product page image.",
+    copy: "Japanese One Piece OP-09 booster box with visible price and real product image.",
     market: "up"
   },
   {
     id: "jp-onepiece-op14-box",
     title: "One Piece JP OP-14 Seven Warlords of the Sea Booster Box",
     category: "Japanese One Piece",
-    badge: "Live shop price",
+    badge: "Listed price",
     price: 79.99,
     realPrice: 79.99,
-    stock: "Source listing",
+    stock: "Available by request",
     image: assetPath("assets/product-real-op14.jpg"),
     condition: "Japanese edition | factory sealed",
     code: "OP-14-JP",
-    source: "PurrfectPulls",
-    sourceUrl: "https://purrfectpulls.com/products/one-piece-card-game-op-14-seven-warlords-of-the-sea-japanese-booster-box",
-    marketNote: "$79.99 listed source price.",
     copy: "Japanese One Piece OP-14 Seven Warlords of the Sea sealed booster box, framed for dp.cards.",
     market: "steady"
   }
@@ -284,7 +248,7 @@ function setActiveCategory(category) {
 }
 
 function matchesProduct(product, query) {
-  const haystack = `${product.title} ${product.category} ${product.badge} ${product.code} ${product.source}`.toLowerCase();
+  const haystack = `${product.title} ${product.category} ${product.badge} ${product.code}`.toLowerCase();
   return haystack.includes(query.trim().toLowerCase());
 }
 
@@ -331,7 +295,7 @@ function renderProducts() {
           <img src="${product.image}" alt="${product.title}" loading="lazy" />
         </div>
         <div class="product-frame-foot">
-          <span>Real price</span>
+          <span>Price</span>
           <strong>${formatPrice(displayPrice(product))}</strong>
         </div>
       </div>
@@ -341,10 +305,6 @@ function renderProducts() {
           <span class="badge">${product.badge}</span>
         </div>
         <p class="product-meta">${product.category} | ${product.condition} | ${product.code}</p>
-        <p class="source-line">
-          <a href="${product.sourceUrl}" target="_blank" rel="noopener">Source: ${product.source}</a>
-          <span>${product.marketNote}</span>
-        </p>
         <div class="price-line">
           <span class="price">${formatPrice(displayPrice(product))}</span>
           <span class="stock">${product.stock}</span>
@@ -369,7 +329,6 @@ function renderMarket() {
           <td>${product.title}</td>
           <td>${product.category}</td>
           <td>${formatPrice(displayPrice(product))}</td>
-          <td>${product.source}</td>
           <td class="${trendClass}">${trendLabel}</td>
           <td>${product.stock}</td>
         </tr>
@@ -413,7 +372,6 @@ function openProduct(productId) {
   document.querySelector("[data-product-condition]").textContent = activeProduct.condition;
   document.querySelector("[data-product-stock]").textContent = activeProduct.stock;
   document.querySelector("[data-product-code]").textContent = activeProduct.code;
-  document.querySelector("[data-product-source]").textContent = `${activeProduct.source}: ${activeProduct.marketNote}`;
   openDialog(productModal);
 }
 

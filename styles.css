@@ -547,25 +547,6 @@ button {
   font-size: 0.94rem;
 }
 
-.source-line {
-  display: grid;
-  gap: 4px;
-  margin: 0;
-  color: var(--ink-soft);
-  font-size: 0.9rem;
-  line-height: 1.35;
-}
-
-.source-line a {
-  color: var(--blue-dark);
-  font-weight: 900;
-}
-
-.source-line a:hover,
-.source-line a:focus-visible {
-  text-decoration: underline;
-}
-
 .price-line {
   display: flex;
   align-items: center;
