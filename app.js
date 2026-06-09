@@ -321,7 +321,7 @@ function renderProducts() {
     card.innerHTML = `
       <div class="product-media">
         <div class="product-frame-head">
-          <img src="assets/logo-selected.svg" alt="" aria-hidden="true" />
+          <img src="assets/logo-selected.svg?v=2" alt="" aria-hidden="true" />
           <span>${product.category}</span>
         </div>
         <div class="product-shot">
