@@ -1,3 +1,6 @@
+const assetBase = window.DP_CARDS_ASSET_BASE || "";
+const assetPath = (path) => `${assetBase}${path}`;
+
 const products = [
   {
     id: "jp-pokemon-black-bolt-box",
@@ -7,7 +10,7 @@ const products = [
     price: 153.38,
     realPrice: 153.38,
     stock: "Price tracked",
-    image: "assets/product-real-black-bolt.webp",
+    image: assetPath("assets/product-real-black-bolt.webp"),
     condition: "Japanese edition | factory sealed",
     code: "SV11B-BB-JP",
     source: "PokeTrace TCGPlayer/eBay",
@@ -24,7 +27,7 @@ const products = [
     price: 117.19,
     realPrice: 117.19,
     stock: "Price tracked",
-    image: "assets/product-real-white-flare.png",
+    image: assetPath("assets/product-real-white-flare.png"),
     condition: "Japanese edition | factory sealed",
     code: "SV11W-WF-JP",
     source: "PokeTrace TCGPlayer/eBay",
@@ -41,7 +44,7 @@ const products = [
     price: 90.64,
     realPrice: 90.64,
     stock: "Price tracked",
-    image: "assets/product-real-battle-partners.webp",
+    image: assetPath("assets/product-real-battle-partners.webp"),
     condition: "Japanese edition | factory sealed",
     code: "SV9-BP-JP",
     source: "PokeTrace TCGPlayer/eBay",
@@ -58,7 +61,7 @@ const products = [
     price: 155.49,
     realPrice: 155.49,
     stock: "Price tracked",
-    image: "assets/product-real-glory-rocket.webp",
+    image: assetPath("assets/product-real-glory-rocket.webp"),
     condition: "Japanese edition | factory sealed",
     code: "SV10-GTR-JP",
     source: "PriceCharting / eBay",
@@ -75,7 +78,7 @@ const products = [
     price: 96.90,
     realPrice: 96.90,
     stock: "Price tracked",
-    image: "assets/product-real-terastal-fest.webp",
+    image: assetPath("assets/product-real-terastal-fest.webp"),
     condition: "Japanese edition | factory sealed",
     code: "SV8A-TFEX-JP",
     source: "PokeTrace TCGPlayer/eBay",
@@ -92,7 +95,7 @@ const products = [
     price: 109.99,
     realPrice: 109.99,
     stock: "Source listing",
-    image: "assets/product-real-op13.jpg",
+    image: assetPath("assets/product-real-op13.jpg"),
     condition: "Japanese edition | factory sealed",
     code: "OP-13-JP",
     source: "PurrfectPulls",
@@ -109,7 +112,7 @@ const products = [
     price: 64.99,
     realPrice: 64.99,
     stock: "Source listing",
-    image: "assets/product-real-op12.jpg",
+    image: assetPath("assets/product-real-op12.jpg"),
     condition: "Japanese edition | factory sealed",
     code: "OP-12-JP",
     source: "PurrfectPulls",
@@ -126,7 +129,7 @@ const products = [
     price: 62.99,
     realPrice: 62.99,
     stock: "Source listing",
-    image: "assets/product-real-op10.jpg",
+    image: assetPath("assets/product-real-op10.jpg"),
     condition: "Japanese edition | factory sealed",
     code: "OP-10-JP",
     source: "PurrfectPulls",
@@ -143,7 +146,7 @@ const products = [
     price: 69.99,
     realPrice: 69.99,
     stock: "Source listing",
-    image: "assets/product-real-eb03.jpg",
+    image: assetPath("assets/product-real-eb03.jpg"),
     condition: "Japanese edition | factory sealed",
     code: "EB-03-JP",
     source: "PurrfectPulls",
@@ -160,7 +163,7 @@ const products = [
     price: 54.99,
     realPrice: 54.99,
     stock: "Source listing",
-    image: "assets/product-real-prb02.jpg",
+    image: assetPath("assets/product-real-prb02.jpg"),
     condition: "Japanese edition | factory sealed",
     code: "PRB-02-JP",
     source: "PurrfectPulls",
@@ -177,7 +180,7 @@ const products = [
     price: 79.99,
     realPrice: 79.99,
     stock: "Source listing",
-    image: "assets/product-real-op09.jpg",
+    image: assetPath("assets/product-real-op09.jpg"),
     condition: "Japanese edition | factory sealed",
     code: "OP-09-JP",
     source: "PurrfectPulls",
@@ -194,7 +197,7 @@ const products = [
     price: 79.99,
     realPrice: 79.99,
     stock: "Source listing",
-    image: "assets/product-real-op14.jpg",
+    image: assetPath("assets/product-real-op14.jpg"),
     condition: "Japanese edition | factory sealed",
     code: "OP-14-JP",
     source: "PurrfectPulls",
@@ -321,7 +324,7 @@ function renderProducts() {
     card.innerHTML = `
       <div class="product-media">
         <div class="product-frame-head">
-          <img src="assets/logo-selected.svg?v=2" alt="" aria-hidden="true" />
+          <img src="${assetPath("assets/logo-selected.png?v=3")}" alt="" aria-hidden="true" />
           <span>${product.category}</span>
         </div>
         <div class="product-shot">

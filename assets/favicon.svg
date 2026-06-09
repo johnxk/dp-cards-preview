@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title">
-  <title id="title">dp.cards favicon</title>
-  <rect width="64" height="64" rx="12" fill="#101828"/>
-  <rect x="20" y="11" width="32" height="43" rx="6" fill="#155eef" transform="rotate(8 36 32)"/>
-  <rect x="14" y="14" width="32" height="43" rx="6" fill="#ffffff"/>
-  <path d="M23 23h10c10 0 17 7 17 17s-7 17-17 17H23V23Zm8 8v18h3c5 0 8-4 8-9s-3-9-8-9h-3Z" fill="#101828"/>
-  <path d="M23 35h10c8 0 14 5 14 13s-6 13-14 13H23v-8h10c4 0 6-2 6-5s-2-5-6-5H23v-8Z" fill="#155eef"/>
-</svg>
