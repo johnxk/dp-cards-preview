@@ -1,6 +1,21 @@
 const assetBase = window.DP_CARDS_ASSET_BASE || "";
 const assetPath = (path) => `${assetBase}${path}`;
 const priceGateText = "Check price upon account opening";
+const op18PreorderImage = `data:image/svg+xml,${encodeURIComponent(`
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1120" viewBox="0 0 900 1120">
+  <rect width="900" height="1120" rx="48" fill="#101828"/>
+  <rect x="48" y="48" width="804" height="1024" rx="34" fill="#ffffff"/>
+  <rect x="84" y="84" width="732" height="952" rx="24" fill="#eef5ff"/>
+  <rect x="124" y="128" width="652" height="360" rx="18" fill="#101828"/>
+  <text x="450" y="278" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="86" font-weight="900" fill="#ffffff">OP-18</text>
+  <text x="450" y="352" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800" fill="#dbeafe">JAPANESE BOOSTER</text>
+  <rect x="166" y="562" width="568" height="130" rx="16" fill="#155eef"/>
+  <text x="450" y="644" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="900" fill="#ffffff">PRE-ORDER</text>
+  <text x="450" y="778" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="900" fill="#101828">dp.cards</text>
+  <text x="450" y="842" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#344054">Official product image pending</text>
+  <text x="450" y="910" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#667085">Japanese One Piece sealed product</text>
+</svg>
+`)}`;
 
 const products = [
   {
@@ -72,6 +87,20 @@ const products = [
     code: "SV8A-TFEX-JP",
     copy: "Japanese Terastal Fest ex sealed booster box with dp.cards account pricing.",
     market: "steady"
+  },
+  {
+    id: "jp-onepiece-op18-box",
+    title: "One Piece JP OP-18 Booster Box",
+    category: "Japanese One Piece",
+    badge: "PO open",
+    noPrice: true,
+    priceLabel: "PO request",
+    stock: "Pre-order open",
+    image: op18PreorderImage,
+    condition: "Japanese edition | pre-order | factory sealed",
+    code: "OP-18-JP",
+    copy: "Japanese One Piece OP-18 booster box pre-order. Allocation, release timing, shipping, and payment details will be confirmed before purchase.",
+    market: "po"
   },
   {
     id: "jp-onepiece-op13-box",
@@ -175,9 +204,8 @@ const products = [
 
 const categories = ["All Japanese", "Japanese Pokemon", "Japanese One Piece"];
 const storageKeys = {
-  user: "dpCardsJapaneseUserV2",
-  requests: "dpCardsJapaneseRequestsV2",
-  watched: "dpCardsJapaneseWatchedV2"
+  user: "dpCardsJapaneseUserV3",
+  requests: "dpCardsJapaneseRequestsV3"
 };
 
 let activeCategory = "All Japanese";
@@ -231,27 +259,20 @@ function canShowPrices() {
 }
 
 function priceText(product) {
+  if (product.noPrice) return product.priceLabel || "PO request";
   return canShowPrices() ? formatPrice(displayPrice(product)) : priceGateText;
 }
 
-function priceClass(baseClass = "price") {
-  return canShowPrices() ? baseClass : `${baseClass} is-gated`;
+function priceClass(product, baseClass = "price") {
+  return canShowPrices() && !product.noPrice ? baseClass : `${baseClass} is-gated`;
 }
 
 function getRequests() {
   return getStored(storageKeys.requests, []);
 }
 
-function getWatched() {
-  return getStored(storageKeys.watched, ["jp-pokemon-mega-brave-box", "jp-onepiece-op12-box"]);
-}
-
 function productFromTitle(title) {
   return products.find((product) => product.title === title);
-}
-
-function orderNumber(index) {
-  return `DP-${String(index + 1001).padStart(5, "0")}`;
 }
 
 function setActiveCategory(category) {
@@ -298,6 +319,7 @@ function renderProducts() {
 
   visible.forEach((product) => {
     const card = document.createElement("article");
+    const gatedLabel = !showPrices || product.noPrice;
     card.className = "product-card";
     card.innerHTML = `
       <div class="product-media">
@@ -309,8 +331,8 @@ function renderProducts() {
           <img src="${product.image}" alt="${product.title}" loading="lazy" />
         </div>
         <div class="product-frame-foot">
-          <span>${showPrices ? "Price" : "Account price"}</span>
-          <strong class="${showPrices ? "" : "is-gated"}">${priceText(product)}</strong>
+          <span>${product.noPrice ? "Pre-order" : showPrices ? "Price" : "Account price"}</span>
+          <strong class="${gatedLabel ? "is-gated" : ""}">${priceText(product)}</strong>
         </div>
       </div>
       <div class="product-body">
@@ -319,8 +341,8 @@ function renderProducts() {
           <span class="badge">${product.badge}</span>
         </div>
         <p class="product-meta">${product.category} | ${product.condition} | ${product.code}</p>
-        <div class="price-line${showPrices ? "" : " is-gated"}">
-          <span class="${priceClass()}">${priceText(product)}</span>
+        <div class="price-line${gatedLabel ? " is-gated" : ""}">
+          <span class="${priceClass(product)}">${priceText(product)}</span>
           <span class="stock">${product.stock}</span>
         </div>
         <div class="product-actions">
@@ -337,13 +359,14 @@ function renderMarket() {
   const showPrices = canShowPrices();
   marketBody.innerHTML = products
     .map((product) => {
-      const trendLabel = product.market === "up" ? "Rising" : product.market === "flat" ? "Flat" : "Stable";
-      const trendClass = product.market === "up" ? "trend-up" : product.market === "flat" ? "trend-flat" : "";
+      const trendLabel = product.market === "up" ? "Rising" : product.market === "flat" ? "Flat" : product.market === "po" ? "PO" : "Stable";
+      const trendClass = product.market === "up" ? "trend-up" : product.market === "flat" || product.market === "po" ? "trend-flat" : "";
+      const gatedPrice = !showPrices || product.noPrice;
       return `
         <tr>
           <td>${product.title}</td>
           <td>${product.category}</td>
-          <td class="${showPrices ? "" : "is-gated-cell"}">${priceText(product)}</td>
+          <td class="${gatedPrice ? "is-gated-cell" : ""}">${priceText(product)}</td>
           <td class="${trendClass}">${trendLabel}</td>
           <td>${product.stock}</td>
         </tr>
@@ -356,7 +379,7 @@ function renderContactOptions() {
   const showPrices = canShowPrices();
   const options = [
     '<option value="General request">General request</option>',
-    ...products.map((product) => `<option value="${product.title}">${product.title}${showPrices ? ` - ${priceText(product)}` : ""}</option>`)
+    ...products.map((product) => `<option value="${product.title}">${product.title}${showPrices && !product.noPrice ? ` - ${priceText(product)}` : ""}</option>`)
   ];
   contactProduct.innerHTML = options.join("");
 }
@@ -385,7 +408,7 @@ function openProduct(productId) {
   document.querySelector("[data-product-image]").alt = activeProduct.title;
   const modalPrice = document.querySelector("[data-product-price]");
   modalPrice.textContent = priceText(activeProduct);
-  modalPrice.classList.toggle("is-gated", !canShowPrices());
+  modalPrice.classList.toggle("is-gated", !canShowPrices() || activeProduct.noPrice);
   document.querySelector("[data-product-copy]").textContent = activeProduct.copy;
   document.querySelector("[data-product-condition]").textContent = activeProduct.condition;
   document.querySelector("[data-product-stock]").textContent = activeProduct.stock;
@@ -414,9 +437,6 @@ function initialsFromEmail(email) {
 function renderAccount() {
   const user = getUser();
   const requests = getRequests();
-  const watched = getWatched()
-    .map((id) => products.find((product) => product.id === id))
-    .filter(Boolean);
 
   accountLink.textContent = user ? "Account" : "Open account";
 
@@ -424,10 +444,10 @@ function renderAccount() {
     accountPanel.innerHTML = `
       <div class="empty-account">
         <div>
-          <p class="eyebrow">No user signed in</p>
-          <h3>Open account to check prices.</h3>
+          <p class="eyebrow">Buyer account</p>
+          <h3>Open account to unlock prices.</h3>
         </div>
-        <p>${priceGateText}</p>
+        <p>Use your account to view prices and keep your request history in one place.</p>
         <button class="primary-button" type="button" data-login-open>Open account</button>
       </div>
     `;
@@ -441,55 +461,39 @@ function renderAccount() {
         .map(
           (request) => `
             <article class="request-item">
-              <div>
-                <strong>${request.orderId} | ${request.product}</strong>
-                <p>${request.createdAt} | Qty ${request.quantity} | ${request.replyTo}</p>
+              <strong>${request.product}</strong>
+              <p>${request.createdAt} | Qty ${request.quantity}</p>
+              <p>${request.replyTo}</p>
+              <div class="request-meta-row">
                 <p class="request-next">${request.nextStep}</p>
-              </div>
-              <div class="order-side">
-                <span class="price">${request.total}</span>
                 <span class="badge">${request.status}</span>
               </div>
             </article>
           `
         )
         .join("")
-    : '<p class="product-meta">No order requests yet.</p>';
-
-  const watchedRows = watched
-    .map(
-      (product) => `
-        <article class="watch-item">
-          <div>
-            <strong>${product.title}</strong>
-            <p>${product.stock}</p>
-          </div>
-          <span class="${priceClass()}">${priceText(product)}</span>
-        </article>
-      `
-    )
-    .join("");
+    : '<p class="product-meta">No requests yet. Use Contact us or Request on any product card.</p>';
 
   accountPanel.innerHTML = `
     <div class="account-grid">
       <aside class="profile-box">
         <div class="account-avatar">${initialsFromEmail(user.email)}</div>
         <h3>${user.email}</h3>
-        <p>Buyer profile</p>
+        <p>Account access active</p>
+        <div class="account-summary">
+          <span>Prices unlocked</span>
+          <span>Japanese inventory</span>
+        </div>
         <button class="ghost-button full" type="button" data-logout>Logout</button>
       </aside>
       <div class="account-content">
         <section class="request-box" aria-label="Purchase requests">
-          <h3>Order requests</h3>
+          <h3>Recent requests</h3>
           <div class="account-summary">
-            <span>${requests.length} order requests</span>
-            <span>Status: awaiting dp.cards confirmation</span>
+            <span>${requests.length === 1 ? "1 saved request" : `${requests.length} saved requests`}</span>
+            <span>Reply sent through your submitted contact</span>
           </div>
           ${requestRows}
-        </section>
-        <section class="watch-box" aria-label="Watched products">
-          <h3>Watched products</h3>
-          ${watchedRows}
         </section>
       </div>
     </div>
@@ -515,23 +519,13 @@ function handleContactSubmit(event) {
   event.preventDefault();
   const data = Object.fromEntries(new FormData(contactForm).entries());
   const requests = getRequests();
-  const product = productFromTitle(data.product);
   const quantity = Math.max(1, Number(data.quantity || 1));
-  const total = product ? formatPrice(displayPrice(product) * quantity) : "Pending";
   const createdAt = new Date().toLocaleString([], { dateStyle: "medium", timeStyle: "short" });
-  if (!getUser()) {
-    setStored(storageKeys.user, {
-      email: data.replyTo,
-      signedInAt: new Date().toISOString()
-    });
-  }
   requests.push({
     ...data,
     quantity,
-    total,
-    orderId: orderNumber(requests.length),
     status: "Awaiting confirmation",
-    nextStep: "dp.cards confirms stock, shipping, and payment instructions before payment.",
+    nextStep: "dp.cards will confirm stock, shipping, and payment details directly.",
     createdAt
   });
   setStored(storageKeys.requests, requests);
@@ -549,7 +543,6 @@ function handleContactSubmit(event) {
   link.textContent = "Contact us";
   link.className = "form-mail-link";
   formResult.append(link);
-  document.querySelector("#account").scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 function handleLogin(event) {
